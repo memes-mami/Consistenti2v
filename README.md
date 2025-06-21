@@ -1,18 +1,12 @@
 # ConsistI2V
-<!-- ### This repo is under construction. Please stay tuned. -->
 
-[**🌐 Homepage**](https://tiger-ai-lab.github.io/ConsistI2V/) | [**📖 arXiv**](https://arxiv.org/abs/2402.04324) | [**🤗 Model**](https://huggingface.co/TIGER-Lab/ConsistI2V) | [**📊 I2V-Bench**](https://drive.google.com/drive/folders/1eg_vtowKZBen74W-A1oeO4bR1K21giks) | [**🤗 Space**](https://huggingface.co/spaces/TIGER-Lab/ConsistI2V) | [**🎬 Replicate Demo**](https://replicate.com/wren93/consisti2v)
+
 
 This repo contains the codebase for our TMLR-2024 paper "[ConsistI2V: Enhancing Visual Consistency for Image-to-Video Generation](https://arxiv.org/abs/2402.04324)"
 
 We propose ConsistI2V, a diffusion-based method to enhance visual consistency for I2V generation. Specifically, we introduce (1) spatiotemporal attention over the first frame to maintain spatial and motion consistency, (2) noise initialization from the low-frequency band of the first frame to enhance layout consistency. These two approaches enable ConsistI2V to generate highly consistent videos.
 <img src="https://tiger-ai-lab.github.io/ConsistI2V/static/images/consisti2v_main.png" alt="ConsistI2V">
 
-## 🔔News
-- **[2024-03-26]: Try our Gradio Demo on Huggingface [Space](https://huggingface.co/spaces/TIGER-Lab/ConsistI2V)! Thanks [@AK](https://twitter.com/_akhaliq) for the help.**
-- **[2024-03-21]: Add Gradio Demo. Run `python app.py` to launch the demo locally.**
-- **[2024-03-09]: Add Replicate [Demo](https://replicate.com/wren93/consisti2v). Thanks [@chenxwh](https://github.com/chenxwh) for the effort!**
-- **[2024-02-26]: Release code and [model](https://huggingface.co/TIGER-Lab/ConsistI2V) for ConsistI2V.**
 
 
 ## Environment Setup
@@ -83,15 +77,4 @@ where `GPU_PER_NODE`, `MASTER_ADDR`, `MASTER_PORT`, `NUM_NODES` and `NODE_RANK` 
 ```
 Videos can be stored in multiple subdirectories. Alternatively, you can modify the dataloader to support your own dataset. Similar to model inference, you can also add additional arguments at the end of the training command to modify the training configurations in `configs/training/training.yaml`.
 
-## Citation
-Please kindly cite our paper if you find our code, data, models or results to be helpful.
-```bibtex
-@article{ren2024consisti2v,
-  title={ConsistI2V: Enhancing Visual Consistency for Image-to-Video Generation},
-  author={Ren, Weiming and Yang, Harry and Zhang, Ge and Wei, Cong and Du, Xinrun and Huang, Stephen and Chen, Wenhu},
-  journal={arXiv preprint arXiv:2402.04324},
-  year={2024}
-}
-```
-## Acknowledgements
-Our codebase is built upon [AnimateDiff](https://github.com/guoyww/AnimateDiff), [FreeInit](https://github.com/TianxingWu/FreeInit) and 🤗 [diffusers](https://github.com/huggingface/diffusers). Thanks for open-sourcing.
+
